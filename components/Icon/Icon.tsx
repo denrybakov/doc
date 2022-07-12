@@ -1,0 +1,63 @@
+import Image from 'next/image';
+import React from 'react';
+import { Text } from '../Text';
+
+export enum EIcon {
+  hand = 'hand',
+  mouth = 'mouth',
+  lungs = 'lungs',
+  legs = 'legs',
+  joints = 'joints',
+  hips = 'hips',
+  human = 'human',
+  scoliosis = 'scoliosis'
+}
+
+interface IIcon {
+  className?: string
+  img: string
+  width: number
+  height: number
+  text: string
+}
+
+export function Icon({ img, width, height, text, className = '' }: IIcon) {
+  return (
+    <div className={`carouselIMG ${className ? className : ''}`}>
+      <span className={'carouselIMG__img'}>
+        <span style={{
+          position: 'absolute',
+          width: '41px',
+          height: '41px',
+          top: '-21px',
+          left: '-30px',
+          zIndex: '1000000'
+        }}>
+          <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_299_575)">
+              <circle cx="45.5" cy="41.5" r="20.5" fill="#1A6EA0" />
+            </g>
+            <mask id="path-2-inside-1_299_575" fill="white">
+              <path fillRule="evenodd" clipRule="evenodd" d="M50 29H42V37L34 37V45H42V53H50V45H58V37L50 37V29Z" />
+            </mask>
+            <path d="M42 29V28H41V29H42ZM50 29H51V28H50V29ZM42 37V38L43 38V37H42ZM34 37L34 36H33V37H34ZM34 45H33V46H34V45ZM42 45H43V44H42V45ZM42 53H41V54H42V53ZM50 53V54H51V53H50ZM50 45V44H49V45H50ZM58 45V46H59V45H58ZM58 37H59V36H58V37ZM50 37H49V38H50V37ZM42 30H50V28H42V30ZM43 37V29H41V37H43ZM34 38H42V36L34 36L34 38ZM35 45V37H33V45H35ZM42 44H34V46H42V44ZM43 53V45H41V53H43ZM50 52H42V54H50V52ZM49 45V53H51V45H49ZM58 44H50V46H58V44ZM57 37V45H59V37H57ZM50 38L58 38V36L50 36V38ZM49 29V37H51V29H49Z" fill="white" mask="url(#path-2-inside-1_299_575)" />
+            <defs>
+              <filter id="filter0_d_299_575" x="0" y="0" width="91" height="91" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="12.5" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_299_575" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_299_575" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+        </span>
+        <Image src={img} alt='asdasf' width={width} height={height} />
+      </span>
+      <Text As='p' style={{ opacity: 0 }}>{text}</Text>
+    </div>
+  )
+} 

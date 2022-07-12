@@ -1,0 +1,23 @@
+.carousel {
+	/* margin-top: 200px; */
+	margin: 130px auto 60px auto;
+	position: relative;
+	text-align: center;
+	width: 650px;
+	height: 650px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.carousel > span:before {
+	position: absolute;
+	bottom: 47px;
+	left: 0;
+	right: 0;
+	content: 'Взрослый';
+	font-size: 30px;
+	color: var(--secondary);
+	font-weight: 500;
+	z-index: 100;
+}

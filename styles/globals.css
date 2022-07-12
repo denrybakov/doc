@@ -1,16 +1,302 @@
-html,
+:root {
+	--primary: #2a477d;
+	--secondary: #068ca6;
+	--textGradient: 0px 4px 4px rgba(6, 140, 166, 0.31);
+	--white: #fff;
+	--bgGradient: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(224, 247, 252, 0.583333) 25.87%,
+		#caf2fa 100%
+	);
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	margin: 0;
+	color: var(--primary);
+	font-family: 'Roboto', sans-serif;
+}
+
+main {
+	display: block;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	background-color: transparent;
 }
 
-* {
-  box-sizing: border-box;
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+img {
+	border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+button,
+input {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+progress {
+	vertical-align: baseline;
+}
+
+textarea {
+	overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+details {
+	display: block;
+}
+
+summary {
+	display: list-item;
+}
+
+template {
+	display: none;
+}
+
+[hidden] {
+	display: none;
+}
+
+span.more {
+	font-size: 14px;
+	color: var(--secondary);
+}
+
+.carouselIMG {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	/* position: relative; */
+	/* max-width: 392px; */
+	height: 131px;
+	cursor: pointer;
+}
+
+.carouselIMG.hand {
+	top: 80px !important;
+	right: -156px !important;
+	left: auto;
+}
+
+.carouselIMG.mouth {
+	top: 256px !important;
+	right: -174px !important;
+	left: auto;
+}
+
+.carouselIMG.lungs {
+	top: auto !important;
+	bottom: 55px !important;
+	right: -91px;
+	left: auto;
+}
+
+.carouselIMG.legs {
+	top: auto !important;
+	bottom: -44px !important;
+	right: 208px;
+	left: auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.carouselIMG.legs > p {
+	text-align: center;
+}
+
+.carouselIMG.joints {
+	top: auto !important;
+	bottom: 58px !important;
+	left: -110px;
+	flex-direction: row-reverse;
+}
+
+.carouselIMG.hips {
+	top: auto !important;
+	bottom: 262px !important;
+	left: -102px;
+	flex-direction: row-reverse;
+}
+
+.carouselIMG.human {
+	top: auto !important;
+	top: 81px !important;
+	left: -54px;
+	flex-direction: row-reverse;
+}
+
+.carouselIMG.scoliosis {
+	top: auto !important;
+	top: -4px !important;
+	left: 262px;
+	flex-direction: column-reverse;
+}
+
+.carouselIMG__img {
+	position: relative;
+	width: 123px;
+}
+
+.carouselIMG > p {
+	text-align: left;
+	max-width: 216px;
+	/* width: 100%; */
+	font-weight: 500;
+}
+
+.carouselIMG.mouth > p {
+	max-width: 187px;
+}
+
+.carouselIMG.lungs > p {
+	max-width: 160px;
+}
+
+.carouselIMG__img:hover + p {
+	opacity: 1 !important;
 }

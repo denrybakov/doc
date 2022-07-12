@@ -1,0 +1,17 @@
+.blockText {
+	display: inline-block;
+	text-align: left;
+	width: 100%;
+	padding: 20px;
+	background-color: var(--white);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border: 3px solid var(--secondary);
+	box-shadow: 0px 4px 4px rgba(6, 140, 166, 0.31);
+	font-size: 21px;
+	line-height: 27px;
+	font-weight: normal;
+}

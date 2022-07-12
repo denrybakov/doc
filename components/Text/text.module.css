@@ -1,0 +1,20 @@
+h3.text {
+	font-size: 30px;
+	/* font-weight: normal; */
+}
+
+.text.bold {
+	font-weight: 700;
+}
+
+.text.secondary {
+	color: var(--secondary);
+}
+
+.text.primary {
+	color: var(--primary);
+}
+
+.text.center {
+	text-align: center;
+}
